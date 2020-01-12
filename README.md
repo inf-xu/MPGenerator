@@ -60,15 +60,25 @@
 
 ### 下载
 
-Windows 
+Windows [MPGenrator](https://www.lanzous.com/i8mk3oh)
 
 ### 安装
 
 ```bash
 # Clone this repository
 git clone https://github.com/KDaisyers/MPGenerator
+```
+
+### 初始化
+
+```bash
 # Install dependencies
 npm install
+```
+
+### 运行
+
+```bash
 # Run the app
 npm start
 ```
