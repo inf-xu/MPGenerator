@@ -1,0 +1,29 @@
+{
+  "name": "electron-quick-start",
+  "version": "1.0.0",
+  "description": "A minimal Electron application",
+  "main": "main.js",
+  "scripts": {
+    "start": "electron .",
+    "package": "electron-packager ./ notes --all --out ./OutApp --electron-version 4.0.1 --overwrite --icon=./renderer/assets/inchworld.ico"
+  },
+  "repository": "https://github.com/electron/electron-quick-start",
+  "keywords": [
+    "Electron",
+    "quick",
+    "start",
+    "tutorial",
+    "demo"
+  ],
+  "author": "GitHub",
+  "license": "CC0-1.0",
+  "devDependencies": {
+    "electron": "^7.1.7"
+  },
+  "dependencies": {
+    "cheerio": "^1.0.0-rc.3",
+    "electron-packager": "^14.1.1",
+    "iconv-lite": "^0.5.0",
+    "request": "^2.88.0"
+  }
+}

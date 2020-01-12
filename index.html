@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <!-- https://developer.mozilla.org/en-US/docs/Web/HTTP/CSP -->
+  <!-- <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'"> -->
+  <meta http-equiv="Content-Security-Policy"
+    content="default-src *; style-src 'self' http://* 'unsafe-inline'; script-src 'self' http://* 'unsafe-inline' 'unsafe-eval'" />
+  <meta http-equiv="X-Content-Security-Policy" content="default-src 'self'; script-src 'self'">
+
+  <title>早报生成器</title>
+
+  <script src="http://pv.sohu.com/cityjson?ie=utf-8"></script>
+  <link rel="stylesheet" href="./renderer/css/bootstrap.min.css">
+  <link rel="stylesheet" href="./renderer/css/style.css">
+  <script src="./renderer/js/jquery.js"></script>
+</head>
+
+<body>
+  <div class="container-fluid">
+    <div class="top-container">
+      <!-- news -->
+      <div class="panel panel-primary news-panel">
+        <div class="panel-heading paper-heading"><span>新闻热点</span> <span class="glyphicon glyphicon-retweet news-exchange"
+            aria-hidden="true"></span> </div>
+        <!-- Table -->
+        <table class="table table-hover news-table">
+          <tbody>
+          </tbody>
+        </table>
+      </div>
+
+      <!-- paper -->
+      <div class="panel panel-success paper-panel">
+        <div class="panel-heading paper-heading"> <span>早报预览</span> <span class="glyphicon glyphicon-paste btn-copy"
+            aria-hidden="true"></span></div>
+        <!-- TextArea -->
+        <textarea class="copy-content"></textarea>
+      </div>
+    </div>
+
+    <div class="bottom-container">
+      <!-- one -->
+      <div class="panel panel-info one-panel">
+        <div class="panel-heading">每日一言 <small>one</small> </div>
+        <img src="./renderer/assets/img5.jpg" alt="one" />
+      </div>
+
+      <!-- weather -->
+      <div class="panel panel-warning tem-panel">
+        <div class="panel-heading tem-hearding">
+          <span>今日温度 <small>天气</small></span>
+          <input type="text" class="form-control" placeholder="武汉" id="input-city">
+        </div>
+        <div class="tem-body">
+          <div class="page-header">
+            <h1></h1>
+          </div>
+          <h3> <strong></strong><img />
+          </h3>
+          <h4><kbd></kbd></h4>
+          <p></p>
+          <hr>
+          <div class="row">
+          </div>
+        </div>
+      </div>
+
+      <!-- button -->
+      <div class="panel panel-info copy-panel">
+        <img src="./renderer/assets/img6.jpg" alt="one" />
+        <h2>早报生成器</h2>
+        <p>这个是我在吾爱破解上接连几次刷到了使用不同语言编写的<strong>公司早报生成器</strong>后,为了表示JS也可以做到，于是是用Eletron覆写了一个</p>
+        <p class="text-success"> 热点新闻来自人民网，每日一言来自《One》，如果界面加载不出来，请手动输入<strong>城市</strong>，因为地理位置Api访问每天次数有限制.</p>
+        <p>能被JS替代的，终将被JS替代</p>
+        <button type="button" class="btn btn-large btn-block btn-primary btn-copy btn-copy-copy">一键复制</button>
+        <button type="button" class="btn btn-large btn-block btn-info btn-changeImg">更换图片</button>
+      </div>
+    </div>
+  </div>
+  <!-- You can also require other files to run in this process -->
+  <script src="./renderer/js/data.js"></script>
+  <script src="./renderer/renderer.js"></script>
+
+</body>
+
+</html>
